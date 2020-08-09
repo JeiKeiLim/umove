@@ -3,74 +3,8 @@
 
 <head>
     <title>uMove - PoseNet</title>
-    <style>
-        .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            color: black;
-        }
-
-        .footer-text {
-            max-width: 600px;
-            text-align: center;
-            margin: auto;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .footer-text,
-            .dg {
-                display: none;
-            }
-        }
-
-        /*
-         *  The following loading spinner CSS is from SpinKit project
-         *  https://github.com/tobiasahlin/SpinKit
-         */
-        .sk-spinner-pulse {
-            width: 20px;
-            height: 20px;
-            margin: auto 10px;
-            float: left;
-            background-color: #333;
-            border-radius: 100%;
-            -webkit-animation: sk-pulseScaleOut 1s infinite ease-in-out;
-            animation: sk-pulseScaleOut 1s infinite ease-in-out;
-        }
-
-        @-webkit-keyframes sk-pulseScaleOut {
-            0% {
-                -webkit-transform: scale(0);
-                transform: scale(0);
-            }
-
-            100% {
-                -webkit-transform: scale(1.0);
-                transform: scale(1.0);
-                opacity: 0;
-            }
-        }
-
-        @keyframes sk-pulseScaleOut {
-            0% {
-                -webkit-transform: scale(0);
-                transform: scale(0);
-            }
-
-            100% {
-                -webkit-transform: scale(1.0);
-                transform: scale(1.0);
-                opacity: 0;
-            }
-        }
-
-        .spinner-text {
-            float: left;
-        }
-    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="default.css">
     <link rel="stylesheet" href="camera.css">
 </head>
 
@@ -83,6 +17,7 @@
         </div>
         <div class="sk-spinner sk-spinner-pulse"></div>
     </div>
+    <!-- Top -->
     <div class="container">
         <div class="left">
             (::
@@ -94,6 +29,7 @@
             ::)
         </div>
     </div>
+    <!-- Main -->
     <div class='container'>
         <div class="left">
         </div>
@@ -105,6 +41,7 @@
         <div class="right">
         </div>
     </div>
+    <!-- Bottom -->
     <div class="container">
         <div class="left">
             (::
@@ -117,6 +54,7 @@
             ::)
         </div>
     </div>
+    <!-- Footer -->
     <div class="footer">
         <div class="footer-text">
             <p>

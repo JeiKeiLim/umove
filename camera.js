@@ -480,7 +480,7 @@ export async function bindPage() {
 
   // setupGui([], net);
   guiState.net = net;
-  setupFPS();
+  // setupFPS();
   detectPoseInRealTime(video, net);
 }
 

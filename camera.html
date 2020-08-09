@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>PoseNet - Camera Feed Demo</title>
+    <title>uMove - PoseNet</title>
     <style>
         .footer {
             position: fixed;
@@ -19,7 +19,6 @@
         }
 
         @media only screen and (max-width: 600px) {
-
             .footer-text,
             .dg {
                 display: none;
@@ -72,6 +71,7 @@
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="camera.css">
 </head>
 
 <body>
@@ -83,10 +83,16 @@
         </div>
         <div class="sk-spinner sk-spinner-pulse"></div>
     </div>
-    <div id='main' style='display:none'>
-        <video id="video" playsinline style="display: none;">
-        </video>
-        <canvas id="output" />
+    <div id='container'>
+        <div id="left">
+        </div>
+        <div id='main'>
+            <video id="video" playsinline style="display: none;">
+            </video>
+            <canvas id="output"/>
+        </div>
+        <div id="right">
+        </div>
     </div>
     <div class="footer">
         <div class="footer-text">

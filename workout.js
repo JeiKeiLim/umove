@@ -14,10 +14,13 @@ export class DoSomeWorkout {
 
 		this.sTime = ( performance || Date ).now()
 
-		console.log(this.beginTime)
 	}
 
 	arriveKeypoints(poses, minPoseConfidence, minPartConfidence) {
+		if(poses.length < 1) {
+			return;
+		}
+
 		let time = ( performance || Date ).now()
 		this.times.push(time-this.sTime);
 		this.sTime = time;
@@ -34,19 +37,17 @@ export class DoSomeWorkout {
 				this.times.pop(0);
 			}
 
-			console.log("totalTime: ", totalTime);
+			// console.log("totalTime: ", totalTime);
 			console.log("Hz: ", hz);
+			console.log("meanTime: ", meanTime);
 		}
-
+		
 		let poseIdx = poses.reduce((idx, pose, i, arr) => pose.score > arr[idx] ? i : idx, 0);
 		let pose = poses[poseIdx];
 
-		
-		poses.forEach(({score, keypoints}) => {
-			if (score >= minPoseConfidence) {
-				this.keypoints.push(keypoints);
-			}
-		});
+		if(pose.score > minPoseConfidence) {
+			this.keypoints.push(pose.keypoints);
+		}
 
 		// Do some workout counting here
 

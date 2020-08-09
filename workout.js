@@ -14,6 +14,7 @@ export class DoSomeWorkout {
 
 		this.sTime = ( performance || Date ).now()
 
+		console.log(this.beginTime)
 	}
 
 	arriveKeypoints(poses, minPoseConfidence, minPartConfidence) {
